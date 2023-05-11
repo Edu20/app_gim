@@ -23,3 +23,4 @@ class Profesores(models.Model):
     telefono = models.CharField(max_length=20)
     dni = models.CharField(max_length=32)
     fecha_nac = models.DateField()
+            
