@@ -22,7 +22,9 @@ def saludar_usuario(request, nombre):
     return pagina_html
 
 def saludar_con_html(request):
-    contexto = {}
+    contexto = {
+        "usuario":"Eduardo"
+    }
     http_response = render(
         request=request,
         template_name="app_gim/base.html",
