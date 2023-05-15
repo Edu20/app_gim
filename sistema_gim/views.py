@@ -31,3 +31,13 @@ def saludar_con_html(request):
         context=contexto
     )
     return http_response
+
+
+def inicio(request):
+    contexto = {}
+    http_response = render(
+        request=request,
+        template_name="app_gim/index.html",
+        context=contexto
+    )
+    return http_response

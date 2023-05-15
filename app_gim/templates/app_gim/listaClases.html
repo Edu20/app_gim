@@ -1,12 +1,13 @@
 {% extends "app_gim/base.html" %}
 
+
 {% block contenido %}
 <section>
     <div>
-        <h1>Lista de alumnos</h1>
+        <h1>Lista de clases</h1>
         <ul>
-            {% for alumno in alumnos %}
-                <li>{{ alumno.apellido }}, {{ alumno.nombre}}</li>
+            {% for clase in clases %}
+                <li>Clase: {{ clase.nombre }}, Dias: {{ clase.dia}}, Horario: {{ clase.horarios}}</li>
             {% endfor %}
         </ul>
     </div>
