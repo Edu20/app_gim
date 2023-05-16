@@ -15,6 +15,8 @@ class Alumnos(models.Model):
     dni = models.CharField(max_length=32)
     fecha_nac = models.DateField()
 
+    def __str__(self):
+        return f"{self.nombre}, {self.apellido}"
 
 class Profesores(models.Model):
     apellido = models.CharField(max_length=256)

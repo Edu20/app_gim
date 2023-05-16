@@ -25,6 +25,6 @@ urlpatterns = [
     path('saludoFecha/', saludar_con_fecha),
     path('saludoNombre/<nombre>/', saludar_usuario),
     path('saludoHtml/', saludar_con_html),
-    path('', inicio),
+    path('', inicio, name="inicio"),
     path('info/', include("app_gim.urls") )
 ]
