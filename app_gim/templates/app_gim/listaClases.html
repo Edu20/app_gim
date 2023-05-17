@@ -4,10 +4,11 @@
 {% block contenido %}
 <section>
     <div>
+        <a href="{% url 'crear_clases' %}">Crear clase</a>
         <h1>Lista de clases</h1>
         <ul>
             {% for clase in clases %}
-                <li>Clase: {{ clase.nombre }}, Dias: {{ clase.dia}}, Horario: {{ clase.horarios}}</li>
+                <li>Clase: {{ clase.nombre }}, Dias: {{ clase.dia}}, Horario: {{ clase.horario}}</li>
             {% endfor %}
         </ul>
     </div>

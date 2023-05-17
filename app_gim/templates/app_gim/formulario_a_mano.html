@@ -1,0 +1,15 @@
+{% extends "app_gim/base.html" %}
+
+
+{% block contenido %}
+<form action="{% url 'crear_clases'%}" method="post">
+    {% csrf_token %}
+    <p>Nombre de la clase</p>
+    <input type="text" name="nombre">
+    <p>Día de la clase</p>
+    <input type="text" name="dia">
+    <p>Horario de la clase</p>
+    <input type="text" name="horario">
+    <input type="submit" value="Enviar">
+</form>
+{% endblock contenido %}
