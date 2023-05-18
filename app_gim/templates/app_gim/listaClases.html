@@ -6,6 +6,11 @@
     <div>
         <a href="{% url 'crear_clases' %}">Crear clase</a>
         <h1>Lista de clases</h1>
+        <form action="{% url 'buscar_clases' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="busqueda">
+            <input type="submit" value ="Buscar">
+        </form>
         <ul>
             {% for clase in clases %}
                 <li>Clase: {{ clase.nombre }}, Dias: {{ clase.dia}}, Horario: {{ clase.horario}}</li>

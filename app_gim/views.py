@@ -73,8 +73,25 @@ def crear_clase(request):
         formulario =ClaseFormulario()
         http_response = render(
         request=request,
-        template_name="app_gim/formulario_a_mano.html",
+        template_name="app_gim/formulario_clase.html",
         context={'formulario':formulario}
         )
         return http_response
+    
+
+def buscar_clases(request):
+    if request.method == "POST":
+        data = request.POST
+        busqueda = data["busqueda"]
+        clases = Clases.objects.filter(nombre=busqueda)
+        contexto = {
+            "clases": clases,
+        }
+    http_response = render(
+        request=request,
+        template_name='app_gim/listaClases.html',
+        context=contexto,
+    )
+    return http_response
+        
 
